@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banking</title>
+    <title>💵 Banking</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -19,7 +19,7 @@
             Deposit
           </h1>
           <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
-            $100
+            $<span id="deposit-amount">0</span>
           </h1>
         </div>
         <div class="bg-green-700 rounded-md">
@@ -27,7 +27,7 @@
             withdraw
           </h1>
           <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
-            $00
+            $<span id="withdraw-amount">00</span>
           </h1>
         </div>
         <div class="bg-amber-700 rounded-md">
@@ -35,7 +35,7 @@
             total
           </h1>
           <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
-            $1000
+            $<span id="total-amount">1000</span>
           </h1>
         </div>
       </div>
@@ -43,22 +43,6 @@
       <!-- withdraw or deposit -->
       <div class="grid grid-cols-2 gap-5 mt-12">
         <div class="bg-blue-800 py-12 px-12 rounded-md">
-          <h1 class="text-2xl font-semibold text-white text-center my-5">
-            Please withdraw
-          </h1>
-          <input
-            type="text"
-            class="outline-none w-full py-2 px-3 rounded-lg mx-auto"
-            name=""
-            id="withdraw-input"
-          />
-          <button
-            class="py-2 px-4 bg-green-800 rounded-lg my-5 font-bold text-gray-200"
-          >
-            Submit
-          </button>
-        </div>
-        <div class="bg-violet-800 py-12 px-12 rounded-md">
           <h1 class="text-2xl font-semibold text-white text-center my-5">
             Please deposit
           </h1>
@@ -69,6 +53,24 @@
             id="deposit-input"
           />
           <button
+            id="btn-deposit"
+            class="py-2 px-4 bg-green-800 rounded-lg my-5 font-bold text-gray-200"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="bg-violet-800 py-12 px-12 rounded-md">
+          <h1 class="text-2xl font-semibold text-white text-center my-5">
+            Please withdraw
+          </h1>
+          <input
+            type="text"
+            class="outline-none w-full py-2 px-3 rounded-lg mx-auto"
+            name=""
+            id="withdraw-input"
+          />
+          <button
+            id="btn-deposit"
             class="py-2 px-4 bg-blue-400 rounded-lg my-5 font-bold text-gray-200"
           >
             Submit
@@ -76,5 +78,7 @@
         </div>
       </div>
     </main>
+
+    <script src="deposit.js"></script>
   </body>
 </html>
