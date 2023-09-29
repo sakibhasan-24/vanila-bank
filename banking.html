@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="mt-10">
+      <h1 class="text-6xl text-gray-800 font-bold text-center mt-3">
+        Welcome To Our <span class="text-amber-600">Service</span>
+      </h1>
+    </header>
+    <main class="w-3/4 mx-auto my-10">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-blue-900 rounded-md">
+          <h1 class="text-4xl font-bold px-10 py-2 text-center text-white">
+            Deposit
+          </h1>
+          <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
+            $100
+          </h1>
+        </div>
+        <div class="bg-green-700 rounded-md">
+          <h1 class="text-4xl font-bold px-10 py-2 text-center text-white">
+            withdraw
+          </h1>
+          <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
+            $00
+          </h1>
+        </div>
+        <div class="bg-amber-700 rounded-md">
+          <h1 class="text-4xl font-bold px-10 py-2 text-center text-white">
+            total
+          </h1>
+          <h1 class="text-4xl font-bold px-10 py-10 text-center text-white">
+            $1000
+          </h1>
+        </div>
+      </div>
+
+      <!-- withdraw or deposit -->
+      <div class="grid grid-cols-2 gap-5 mt-12">
+        <div class="bg-blue-800 py-12 px-12 rounded-md">
+          <h1 class="text-2xl font-semibold text-white text-center my-5">
+            Please withdraw
+          </h1>
+          <input
+            type="text"
+            class="outline-none w-full py-2 px-3 rounded-lg mx-auto"
+            name=""
+            id="withdraw-input"
+          />
+          <button
+            class="py-2 px-4 bg-green-800 rounded-lg my-5 font-bold text-gray-200"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="bg-violet-800 py-12 px-12 rounded-md">
+          <h1 class="text-2xl font-semibold text-white text-center my-5">
+            Please deposit
+          </h1>
+          <input
+            type="text"
+            class="outline-none w-full py-2 px-3 rounded-lg mx-auto"
+            name=""
+            id="deposit-input"
+          />
+          <button
+            class="py-2 px-4 bg-blue-400 rounded-lg my-5 font-bold text-gray-200"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
