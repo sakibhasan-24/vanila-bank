@@ -8,7 +8,6 @@ withdrawBtn.addEventListener("click", function () {
   if (withdrawInputValue <= 0 || isNaN(withdrawInputValue)) {
     return alert("this kind of value not allow");
   }
-
   if (parseFloat(totalAmount.innerText) < withdrawInputValue) {
     return alert("insufficient balance");
   }
