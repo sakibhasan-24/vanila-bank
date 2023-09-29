@@ -3,11 +3,15 @@ const totalAmount = document.getElementById("total-amount");
 const withdrawInput = document.getElementById("withdraw-input");
 const withdrawBtn = document.getElementById("btn-withdraw");
 withdrawBtn.addEventListener("click", function () {
-  const withdrawInputValue = parseFloat(withdrawInput.value);
-  withdrawInput.value = "";
-  const totalWithdraw =
-    parseFloat(withdrawAmount.innerText) + withdrawInputValue;
-  withdrawAmount.innerText = totalWithdraw;
-  const totalValue = parseFloat(totalAmount.innerText) + totalWithdraw;
-  totalAmount.innerText = totalValue;
+  const withdrawInputValue = inputValueProcess(withdrawInput);
+  clearInputField(withdrawInput);
+  if (withdrawInputValue <= 0 || isNaN(withdrawInputValue)) {
+    return alert("this kind of value not allow");
+  }
+
+  if (parseFloat(totalAmount.innerText) < withdrawInputValue) {
+    return alert("insufficient balance");
+  }
+  typeValue(withdrawInputValue, withdrawAmount);
+  totalValue(total, withdrawInputValue);
 });
